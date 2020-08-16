@@ -1,0 +1,194 @@
+:root {
+  --primary-color: hsl(180, 29%, 50%);
+  --grey: hsl(180, 8%, 52%);
+  --filter-bg: hsl(180, 31%, 95%);
+  --filter-bg-hover: hsl(180, 35%, 56%);
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Spartan', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 2vw 0;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: 'Spartan', sans-serif;
+}
+
+.loading {
+  text-align: center; 
+}
+
+.job {
+  padding: 3em 2em;
+  background-color: white;
+  border-radius: .5rem;
+  max-width: 900px;
+  margin: 0 auto 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+}
+
+.job-card {
+  display: flex;
+}
+
+.job-meta {
+  display: flex;
+  align-items: center;
+}
+
+.job-meta span:not(:first-child) {
+  margin-left: .75em;
+}
+
+.job-card img {
+  margin-right: 1rem;
+}
+
+.job-card-mainInformation span {
+  font-weight: bold;
+}
+
+.job-card-mainInformation .new, .job-card-mainInformation .featured {
+  color: white;
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: .4em .8em;
+  margin: 0;
+  border-radius: 1em;
+}
+
+.job-card-mainInformation span.featured {
+  background-color: darkslategrey;
+}
+
+.company {
+  color: var(--primary-color);
+}
+
+
+.contract, .postedAt, .location {
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.job-languages {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.job-languages li {
+  
+}
+
+.job-languages li:not(:last-child) {
+  margin-right: .5em;
+}
+
+.job-languages li button {
+  font-size: 12px;
+  color: var(--primary-color);
+  background-color: var(--filter-bg);
+  font-weight: bold;
+  padding: .4em .8em;
+  border-radius: 1em;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0;
+}
+
+.job-languages li button:hover,
+.job-languages li button.active {
+  background-color: var(--filter-bg-hover);
+  color: white;
+}
+
+
+/* Filters */
+
+.filters {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+.filters ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.filters li {
+  margin-right: .5em;
+}
+
+.filters li button {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 0;
+  border: 0;
+  background-color: var(--filter-bg);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 12px;
+  padding: .8em 2.8em .6em 1em;
+  position: relative;
+}
+
+.filters .close {
+  position: absolute;
+  right: 10%;
+  top: 55%;
+  transform: translateY(-50%);
+}
+
+.filters .close svg {
+  fill: var(--primary-color)
+}
+
+.filters li button:hover {
+  background-color: var(--filter-bg-hover);
+  cursor: pointer;
+  color: white;
+}
+
+.filters li button:hover svg {
+  fill: white;
+}
+
+.filters-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear-filters {
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  padding: .4em 1em .2em 1em;
+}
+
